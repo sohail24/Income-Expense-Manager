@@ -1,0 +1,115 @@
+.layout{
+    margin: 0 100px;
+}
+
+.header{
+    background-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: rgb(240, 255, 255) !important;
+    padding: 10px;
+    /* color: black; */
+}
+
+.logo p{
+    font-size: 2em;
+    margin: 0 !important;
+    padding: 10px 15px;
+}
+.user p{
+    font-size: 1.5em;
+    margin: 0 !important;
+    padding: 10px 15px;
+}
+
+.content{
+    /* border: 1px solid rgba(128, 128, 128, 0.552); */
+    box-shadow: 0 0 3px gray;
+    height: 80vh;
+    margin: 20px 0px;
+    border-radius: 10px;
+    padding: 25px;
+    /* background-color: rgb(250, 249, 249); */
+    /* overflow-y: auto; */
+}
+
+
+.data{
+    height: 58vh;
+    /* background-color: black; */
+    overflow: auto;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:865px){
+    .layout{
+        margin: 0 20px;
+    }
+}
+
+.custom-spin {
+    position: absolute;
+    left: 48%;
+    top: 40%;
+    z-index: 100;
+}
+
+.filter{
+    box-shadow: 0 0 2px grey;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+}
+
+.analytics-tab{
+    border: 1px solid rgba(128, 128, 128, 0.396) ;
+    border-radius: 5px;
+    margin: 0px 20px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+}
+
+.customsvg {
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.anticon-active {
+    color: black;
+}
+
+.anticon-inactive {
+    color: rgba(128, 128, 128, 0.6);
+}
+
+.table-analytics{
+    overflow: auto;
+}
+
+@media screen and (max-width:605px){
+    .layout{
+        margin: 0 20px;
+    }
+    .filter{
+        display: flex;
+        flex-direction: column;
+        /* align-content: space-around; */
+    }
+    .analytics-tab{
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .turnover-count, .transactions-count{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,24 @@
+.transactions-count, .turnover-count{
+    border: 1px solid rgba(128, 128, 128, 0.400);
+    padding: 15px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.538);
+}
+
+.analytics h4, h5 {
+    color: grey;
+}
+
+.progress-bars{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.category-card{
+    border: 1px solid rgba(128, 128, 128, 0.400);
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.538);
+    margin: 10px;
+}

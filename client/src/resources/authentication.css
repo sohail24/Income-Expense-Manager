@@ -1,0 +1,19 @@
+.log, .reg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional):before{
+    content: "";
+}
+
+
+/* @media screen and (max-width:700px){
+    .register{
+        margin: 20px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+}  */
