@@ -3,7 +3,7 @@ import DefaultLayout from '../components/DefaultLayout'
 import AddEditTranscation from '../components/AddEditTranscation';
 import Spinner from '../components/Spinner';
 import axios from 'axios';
-import { DatePicker, message, Select, Table, Popconfirm } from 'antd';
+import { DatePicker, message, Select, Table, Popconfirm, Tag} from 'antd';
 import moment from 'moment';
 import { UnorderedListOutlined, AreaChartOutlined , RadarChartOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import Analytics from '../components/Analytics';
@@ -69,13 +69,21 @@ function Home (){
       render: (date)=>  moment(date).format("Do MMMM YYYY"),
     },{
       title: "Amount",
-      dataIndex: "amount"
+      dataIndex: "amount",
+      render: (_, { amount, type }) => {
+        let color =  type === "expense" ? 'volcano' : 'green';
+            return (
+              <Tag color={color}>
+                <b>{color === 'volcano'? '- '+amount : '+ '+amount}</b>
+              </Tag>
+            );
+      },
     },{
       title: "Category",
       dataIndex: "category"
     },{
       title: "Type",
-      dataIndex: "type"
+      dataIndex: "type",
     },{
       title: "Reference",
       dataIndex: "reference"
