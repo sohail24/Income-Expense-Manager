@@ -5,11 +5,16 @@ const validator = require('validator');
 
 router.post('/login', async (req,res) => {
     try {
-        const result = await User.findOne({email : req.body.email,  password : req.body.password});
-        if(result)
-            res.send(result);
-        else
-            res.status(500).json(error);
+        if(!validator.isEmail(req.body.email)){
+            res.status(412).json("Invalid Email Id");
+        }
+        else{
+            const result = await User.findOne({email : req.body.email,  password : req.body.password});
+            if(result)
+                res.send(result);
+            else
+                res.status(500).json("Email Id or Password did not match");
+        }
     } catch (error) {
         res.status(500).json(error);
     }

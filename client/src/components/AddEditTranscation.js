@@ -39,7 +39,7 @@ function AddEditTranscation({showAddEditTransactionModal, setShowAddEditTransact
     <Modal title={selectedItemForEdit !== null? "Edit Transaction" : "Add Transaction"} 
     open={showAddEditTransactionModal} onCancel={()=> setShowAddEditTransactionModal(false)} footer={false}>
         <Form layout='vertical' onFinish={onFinish} initialValues={selectedItemForEdit} >            
-                    <Form.Item label='Add Amount' name="amount" rules={[{required: true, message: 'Please add amount' },]}>
+                    <Form.Item label='Add Amount' name="amount" rules={[{required: true, message: 'Please add amount', pattern: new RegExp(/^[0-9]+$/)},]}>
                         <Input type="text" />
                     </Form.Item>
                     <Form.Item label='Type' name="type" rules={[{required: true, message: 'Please select type!' },]}>

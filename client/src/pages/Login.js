@@ -20,7 +20,10 @@ function Login() {
         } catch (error) {
             setLoading(false)
             console.error(error);
-            message.error('Login Failed')
+            if(!Object.keys(error.response.data).length)
+                message.error("Something went wrong")
+            else
+                message.error(error.response.data)
         }
     }
 
