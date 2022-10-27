@@ -93,6 +93,10 @@
     overflow: auto;
 }
 
+.demo-btn{
+    border-bottom-left-radius: 20px;
+}
+
 @media screen and (max-width:605px){
     .layout{
         margin: 0 20px;

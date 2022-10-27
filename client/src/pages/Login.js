@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../resources/authentication.css'
 import axios from 'axios'
 import Spinner from '../components/Spinner';
+import DemoBtn from '../components/DemoBtn';
 
 function Login() {
     const [loading, setLoading] = useState(false); //react hook for state management, hooks need to be in functional component and placed at top
@@ -37,6 +38,7 @@ function Login() {
   return (
     <div className="login">
         {loading && <Spinner/>}    {/*if both are true the componenet will be launched here!!. */}
+        <DemoBtn />
         <div className="d-flex justify-content-center pt-5 ">
         <h1>Income Expense Manager</h1>
         </div>
